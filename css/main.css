@@ -281,10 +281,6 @@ ul {
 .examples {
   padding-top: 47px;
 }
-.examples-list {
-  display: flex;
-  gap: 30px;
-}
 .examples-title {
   margin-bottom: 50px;
   font-size: 36px;
@@ -292,10 +288,17 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.examples-thumb {
+
+.sample__list {
+  display: flex;
+  gap: 30px;
+}
+
+.sample__thumb {
   position: relative;
 }
-.examples-img-thumb {
+
+.sample__img-thumb {
   display: flex;
   position: absolute;
   width: 100%;
