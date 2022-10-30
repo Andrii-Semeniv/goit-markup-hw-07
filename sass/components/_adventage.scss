@@ -1,48 +1,40 @@
-.adventage {
+.advantage {
   padding-bottom: 47px;
   &-list {
     display: flex;
     gap: 30px;
-    li {
+    &__item {
       max-width: 270px;
       display: block;
     }
   }
 }
 
-.adventage-item::before {
+.advantage-list__item::before {
   content: "";
   height: 120px;
   background-color: var(--background-color-third);
   border-radius: 4px;
   display: block;
   margin-bottom: 30px;
+
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.adventage-item.details::before {
+.advantage-list__item.details::before {
   background-image: url(../images/svg/antenna.svg);
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-.adventage-item.punc::before {
+.advantage-list__item.punc::before {
   background-image: url(../images/svg/clock.svg);
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-.adventage-item.plan::before {
+.advantage-list__item.plan::before {
   background-image: url(../images/svg/diagram.svg);
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-.adventage-item.tech::before {
+.advantage-list__item.tech::before {
   background-image: url(../images/svg/astronaut.svg);
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-.adventage-title {
+.advantage-list__title {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -51,7 +43,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.adventage-text {
+.advantage-list__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;

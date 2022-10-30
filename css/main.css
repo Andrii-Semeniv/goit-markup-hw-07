@@ -98,7 +98,7 @@ ul {
   color: var(--main-color);
 }
 
-.navigation-link {
+.navigation__link {
   color: var(--main-color);
   padding-top: 32px;
   padding-bottom: 32px;
@@ -106,8 +106,24 @@ ul {
   min-width: 48px;
   transition: color var(--animation);
 }
-.navigation-link:hover, .navigation-link:focus {
+.navigation__link:hover, .navigation__link:focus {
   color: var(--link-color);
+}
+
+.navigation__link.current {
+  color: var(--link-color);
+  position: relative;
+  text-align: center;
+}
+.navigation__link.current::after {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--link-color);
 }
 
 .contact-list {
@@ -116,8 +132,8 @@ ul {
   margin-left: auto;
 }
 
-.header-mail,
-.header-tel {
+.contact-list__header-mail,
+.contact-list__header-tel {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -129,32 +145,16 @@ ul {
   color: var(--second-text-color);
   transition: color var(--animation);
 }
-.header-mail:hover, .header-mail:focus,
-.header-tel:hover,
-.header-tel:focus {
+.contact-list__header-mail:hover, .contact-list__header-mail:focus,
+.contact-list__header-tel:hover,
+.contact-list__header-tel:focus {
   color: var(--link-color);
 }
 
-.logo-mail,
-.logo-tel {
+.contact-list__logo-mail,
+.contact-list__logo-tel {
   fill: currentColor;
   margin-right: 10px;
-}
-
-.navigation-link.current {
-  color: var(--link-color);
-  position: relative;
-  text-align: center;
-}
-.navigation-link.current::after {
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--link-color);
 }
 
 .logo {
@@ -171,7 +171,7 @@ ul {
   color: var(--link-color);
   text-decoration: none;
 }
-.logo-part {
+.logo--part {
   color: var(--logo-color);
 }
 
@@ -189,7 +189,7 @@ ul {
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   margin: 0 auto;
   margin-bottom: 30px;
   max-width: 696px;
@@ -201,7 +201,7 @@ ul {
   color: var(--second-color);
 }
 
-.hero-btn {
+.hero__btn {
   padding: 10px 32px;
   min-width: 216px;
   font-family: inherit;
@@ -218,60 +218,51 @@ ul {
   cursor: pointer;
   transition: background-color var(--animation);
 }
-.hero-btn:hover, .hero-btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: var(--btn-second-color);
 }
 
-.adventage {
+.advantage {
   padding-bottom: 47px;
 }
-.adventage-list {
+.advantage-list {
   display: flex;
   gap: 30px;
 }
-.adventage-list li {
+.advantage-list__item {
   max-width: 270px;
   display: block;
 }
 
-.adventage-item::before {
+.advantage-list__item::before {
   content: "";
   height: 120px;
   background-color: var(--background-color-third);
   border-radius: 4px;
   display: block;
   margin-bottom: 30px;
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.adventage-item.details::before {
+.advantage-list__item.details::before {
   background-image: url(../images/svg/antenna.svg);
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.adventage-item.punc::before {
+.advantage-list__item.punc::before {
   background-image: url(../images/svg/clock.svg);
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.adventage-item.plan::before {
+.advantage-list__item.plan::before {
   background-image: url(../images/svg/diagram.svg);
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.adventage-item.tech::before {
+.advantage-list__item.tech::before {
   background-image: url(../images/svg/astronaut.svg);
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.adventage-title {
+.advantage-list__title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -280,7 +271,7 @@ ul {
   text-transform: uppercase;
 }
 
-.adventage-text {
+.advantage-list__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
