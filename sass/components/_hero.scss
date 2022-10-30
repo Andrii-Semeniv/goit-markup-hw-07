@@ -48,9 +48,8 @@
   color: var(--second-color);
   cursor: pointer;
   transition: background-color var(--animation);
-}
-
-.hero-btn:hover,
-.hero-btn:focus {
-  background-color: var(--btn-second-color);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-second-color);
+  }
 }

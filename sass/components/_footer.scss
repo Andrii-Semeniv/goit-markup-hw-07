@@ -23,16 +23,23 @@
 .adress-list-item {
   margin-top: 9px;
   display: block;
+  &:first-child {
+    margin-top: 0;
+  }
 }
-.adress-list-item:first-child {
-  margin-top: 0;
-}
+
 .adress-location {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-color);
   transition: color var(--animation);
+  &:hover {
+    color: var(--link-color);
+  }
+  &:focus {
+    color: var(--link-color);
+  }
 }
 .adress-tel,
 .adress-mail {
@@ -41,26 +48,17 @@
   letter-spacing: 0.03em;
   color: var(--footer-link-color);
   transition: color var(--animation);
+  &:hover {
+    color: var(--link-color);
+  }
+  &:focus {
+    color: var(--link-color);
+  }
 }
 
-.adress-tel:hover,
-.adress-mail:hover,
-.adress-location:hover {
-  color: var(--link-color);
-}
-
-.adress-tel:focus,
-.adress-mail:focus,
-.adress-location:focus {
-  color: var(--link-color);
-}
 .footer-media {
   margin-left: 70px;
   margin-right: 93px;
-}
-
-.footer-list {
-  margin: 0;
 }
 
 .media-text {
@@ -74,6 +72,12 @@
   color: var(--second-color);
 }
 
+.footer-list {
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
 .footer-list-item {
   width: 44px;
   height: 44px;
@@ -81,19 +85,6 @@
   border-radius: 50%;
 }
 
-.footer-link:hover {
-  fill: var(--second-color);
-  background-color: var(--btn-background-color);
-}
-.footer-link:focus {
-  fill: var(--second-color);
-  background-color: var(--btn-background-color);
-}
-
-.footer-list {
-  display: flex;
-  gap: 10px;
-}
 .footer-link {
   border-radius: 50%;
   width: 100%;
@@ -104,6 +95,14 @@
   justify-content: center;
   fill: var(--second-color);
   transition: background-color var(--animation);
+  &:hover {
+    fill: var(--second-color);
+    background-color: var(--btn-background-color);
+  }
+  &:focus {
+    fill: var(--second-color);
+    background-color: var(--btn-background-color);
+  }
 }
 .footer-form {
   width: 100%;
@@ -131,17 +130,17 @@
   color: var(--second-color);
 
   transition: border-color var(--animation);
-}
-.footer-form-email:focus {
-  border-color: var(--btn-background-color);
-  outline: transparent;
-}
+  &:focus {
+    border-color: var(--btn-background-color);
+    outline: transparent;
+  }
 
-.footer-form-email::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: var(--footer-link-color);
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: var(--footer-link-color);
+  }
 }
 
 .footer-form-button {
@@ -167,9 +166,9 @@
   fill: var(--second-color);
 
   transition: background-color var(--animation);
-}
-.footer-form-button:hover {
-  background-color: var(--btn-second-color);
+  &:hover {
+    background-color: var(--btn-second-color);
+  }
 }
 
 .footter-form-icon {

@@ -12,7 +12,7 @@
   letter-spacing: 0.03em;
   color: var(--link-color);
   text-decoration: none;
-}
-.logo-part {
-  color: var(--logo-color);
+  &-part {
+    color: var(--logo-color);
+  }
 }

@@ -67,12 +67,9 @@
   fill: var(--icon-color);
   border-radius: 50%;
   transition: background-color var(--animation), fill var(--animation);
-}
-.media-link:focus {
-  background-color: var(--btn-background-color);
-  fill: var(--second-color);
-}
-.media-link:hover {
-  background-color: var(--btn-background-color);
-  fill: var(--second-color);
+  &:focus,
+  &:hover {
+    background-color: var(--btn-background-color);
+    fill: var(--second-color);
+  }
 }

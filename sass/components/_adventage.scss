@@ -1,15 +1,15 @@
-.advantage {
+.adventage {
   padding-bottom: 47px;
+  &-list {
+    display: flex;
+    gap: 30px;
+    li {
+      max-width: 270px;
+      display: block;
+    }
+  }
 }
 
-.adventage-list {
-  display: flex;
-  gap: 30px;
-}
-.adventage-list li {
-  max-width: 270px;
-  display: block;
-}
 .adventage-item::before {
   content: "";
   height: 120px;

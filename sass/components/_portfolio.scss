@@ -5,14 +5,6 @@
   margin-bottom: 50px;
 }
 
-.portfolio-list-btn:hover,
-.portfolio-list-btn:focus {
-  color: var(--second-color);
-  background-color: var(--btn-background-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 .portfolio-list-btn {
   padding: 6px 22px;
 
@@ -28,6 +20,14 @@
   background-color: var(--background-color-third);
   transition: color var(--animation), background-color var(--animation),
     box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--second-color);
+    background-color: var(--btn-background-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .portfolio-examples-list {
@@ -39,22 +39,6 @@
   margin: 15px;
   width: 370px;
 }
-.portfolio-link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-link:hover .portfolio-img-text {
-  transform: translateY(0);
-}
-.portfolio-link:focus .portfolio-img-text {
-  transform: translateY(0);
-}
-
-.portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .portfolio-link {
   width: 100%;
@@ -63,6 +47,14 @@
   color: var(--main-color);
   background-color: var(--background-color-third);
   transition: box-shadow var(--animation), transform var(--animation);
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 .portfolio-img-thumb {
   position: relative;
@@ -87,6 +79,12 @@
 
   background: rgba(33, 150, 243, 0.9);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  .portfolio-link:hover & {
+    transform: translateY(0);
+  }
+  .portfolio-link:focus & {
+    transform: translateY(0);
+  }
 }
 
 .portfolio-examples-name {
